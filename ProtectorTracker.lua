@@ -61,7 +61,11 @@ local sphereList = { -- Vorne = Rechts
 }
 
 function ProtectorTracker.pointTo(data)
-    d(data)
+    for sphere in sphereList
+        if sphere.bit == data then
+            d(sphere.name)
+        end
+    end
 end
 
 function ProtectorTracker.AddProtector(data)
@@ -85,6 +89,7 @@ function ProtectorTracker.AddProtector(data)
         ProtectorTracker.ProtectorData == 8 or
         ProtectorTracker.ProtectorData == 16 or
         ProtectorTracker.ProtectorData == 32 then
+        ProtectorTracker.found = true
         ProtectorTracker.pointTo(ProtectorTracker.ProtectorData)
     end
 end
