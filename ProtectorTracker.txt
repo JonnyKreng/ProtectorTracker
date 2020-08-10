@@ -1,5 +1,6 @@
 ## Title: Protector Tracker
-## APIVersion: 100025
+## APIVersion: 100031
 ## SavedVariables: ProtectorTrackerVars
+## DependsOn: LibMapPing>=1200
 
 ProtectorTracker.lua
